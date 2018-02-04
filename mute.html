@@ -1,0 +1,68 @@
+<!doctype html>
+<!--
+ This page is shown when the extension button is clicked, because the
+ "browser_action" field in manifest.json contains the "default_popup" key with
+ value "popup.html".
+ -->
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <title>MuteIntercom</title>
+  <style type="text/css">
+    body {
+      margin: 10px;
+      white-space: nowrap;
+      color: #298FEA;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, Roboto, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+      display: flex;
+      align-items: center;
+    }
+
+    h1 {
+      font-size: 14px;
+      margin: 0;
+    }
+
+    img {
+      width: 48px;
+      height: 48px;
+      margin-right: 16px;
+    }
+
+    #container {
+      align-items: center;
+      display: flex;
+      justify-content: space-between;
+    }
+
+    select {
+      padding: 6px;
+      font-size: 14px;
+      margin-top: 8px;
+      height: 28px;
+    }
+
+    option span {
+      vertical-align: middle;
+    }
+  </style>
+  <script src="mute.js"></script>
+</head>
+
+<body>
+  <img src="./MuteIntercom-Icon@2x.png" />
+  <div>
+    <h1>MuteIntercom</h1>
+    <div id="container">
+      <select id="dropdown" disabled>
+        <option selected value="mute">
+          <span>🔕</span> Sounds Disabled</option>
+        <option value="unmute">
+          <span>🔔</span> Sounds Enabled</option>
+      </select>
+    </div>
+  </div>
+</body>
+
+</html>
